@@ -5,7 +5,7 @@ library(dplyr)
 
 # We'll be using the mtcars dataset -- adding rowname as a column
 vehicle <- add_rownames(mtcars, var='car')
-
+View(vehicle)
 
 ######## buggy ######### ----------------------------------------------
 
@@ -17,6 +17,7 @@ BestGearsCyl <- functon(gears, cylinders) {
         filter(gear == gears, cyl == cylinders) %>% 
         filter(mgp = max(mpg)) %>% 
         select(car)
+  return(ret)
 }
 
 # Get the best mpg car for 6 cylinder cars with 4 gears
